@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block contenido %}
+{% load static %}
+<div class="vista">
+    <div class="titulo"><h1>Consulta de Certificados</h1></div>
+    <div class="cuerpo">
+        <div class="contenedor-formulario">
+            <form class="form-login" action ="." method = "POST">
+                {% if mensaje %}
+                    <div class="aviso_error">{{ mensaje }}</div>
+                {% else %}
+                    <div class="aviso_error display_off">{{ mensaje }}</div>
+                {% endif %}
+                <div class="es-bloque">
+                    {% csrf_token %}
+                    <div>
+                        <label for="id_username">Usuario</label>
+                        {{ formulario.username }}
+                    </div>
+                    <div>
+                        <label for="id_password">Contraseña</label>
+                        {{ formulario.password }}
+                    </div>
+
+                    <input type="submit" value ="Entrar">
+                    <br/>
+                    <a href = "#">Powered by Filogy.pe</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="contenedor-logo-login">
+            <div class="logo-login">
+                <img src="{% static "Images/logo.png" %}" alt="logo-principal" id="logo-principal">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" >
+    $(document).ready(function(){
+        $("#id_username").attr('placeholder', 'Ingrese su usuario');
+        $("#id_password").attr('placeholder', 'Ingrese su contraseña');
+    });
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+[
+  {
+    "codigo": "43452d4355422d30353230",
+    "tipo_inspeccion": "CERTIFICADO INSPECCION",
+    "tipo_doc": "CERTIFICADO",
+    "nombre_archivo": "certificado.pdf",
+    "estado": "VIGENTE",
+    "serie": "CE-CUB",
+    "numero": "520",
+    "cod_clie": "381"
+  },
+  {
+    "codigo": "43452d4355422d30323232",
+    "tipo_inspeccion": "CERTIFICADO INSPECCION",
+    "tipo_doc": "CERTIFICADO",
+    "nombre_archivo": "certificado.pdf",
+    "estado": "VIGENTE",
+    "serie": "CE-CUB",
+    "numero": "222",
+    "cod_clie": "169"
+  }
+]

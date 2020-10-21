@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+	<head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Certificaciones">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+        <link rel="stylesheet" href="{% static "CSS/main.css" %}">
+
+        <title>Certificaciones</title>
+	</head>
+
+	<body>
+    <header>
+        <div class="direccion"><div class="direc">SEDE CALLAO: Calle Otto Kieffer Nª 106 Urb. Industrial La Chalaca, Callao</div></div>
+        <div class="contenedor-cabecera-logo">
+            <div class="cabecera-logo">
+                <div class="logo-enlace">
+                    <a href="/"><div class="logo"><img src="{% static "Images/logo.png" %}" alt="logo" id="logo"/></div></a>
+                </div>
+                <a id="logo" href="/cerrar/"> <- Volver a página pricipal</a>
+            </div>
+        </div>
+    </header>
+
+        {% block contenido %}
+        {% endblock %}
+    <footer class="es-borde-amarillo">
+        <h1>Footer</h1>
+    </footer>
+	</body>
+</html>

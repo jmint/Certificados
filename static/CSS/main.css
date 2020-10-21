@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'Exo-Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Exo-light'),
+        url("/static/Fonts/Exo-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Exo-light'),
+        url("/static/Fonts/Exo-Medium.ttf") format('truetype');
+}
+
+html{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: Exo-Light, serif;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    font-family: Exo-Light, serif;
+    background-color: chartreuse;
+
+}
+.direccion{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    background-color: #263451;
+}
+.direc{
+    display: flex;
+    align-items: center;
+    background-color: #263451;
+    color: white;
+    width: 70%;
+}
+.contenedor-cabecera-logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    background-color: #f8f8fa;
+}
+.cabecera-logo{
+    background-color: #f8f8fa;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 70%;
+    height: 100%;
+}
+.logo-enlace{
+    width: 20%;
+    height: 100%;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+}
+#logo{
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.vista{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    height: 85%;
+}
+
+.titulo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    padding: 0 0 0 20px;
+    color: #0075bf;
+    font-size: 1.2rem;
+}
+
+.cuerpo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    padding: 0 0 100px 0;
+}
+
+/*LOGIN*/
+
+.contenedor-logo-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 0 0;
+    width: 50%;
+    height: 70%;
+}
+
+.logo-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.contenedor-logo-login > img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.contenedor-formulario{
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70%;
+}
+
+.form-login{
+    display: flex;
+    border: solid #e3e3e3;
+    width: 68%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.es-bloque{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 85%;
+    justify-content: center;
+}
+
+.es-bloque > div{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    margin: 2px 0 2px 0;
+}
+
+.es-bloque > input{
+    margin: 2px 0 0 0;
+    width: 50%;
+    align-self: flex-end;
+    background-color: #0071bd;
+    border: 1.5px #0071bd;
+    color: white;
+    height: 15%;
+    border-radius: 3px;
+}
+
+.es-bloque > div > input{
+    margin: 5px 0 5px 0;
+    border: 1.5px solid #0075bf;
+    border-radius: 5px;
+    height: 50%;
+}
+
+/*FILES*/
+
+.contenedor-datos{
+    display: flex;
+    width: 35%;
+    align-items: center;
+    height: 70%;
+    justify-content: flex-start;
+}
+
+.contenedor-busqueda{
+    display: flex;
+    width: 65%;
+    align-items: center;
+    height: 70%;
+    justify-content: center;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+    border: #ececec 2.5px solid;
+    height: 100%;
+    width: 80%;
+}
+
+.buscador{
+    display: flex;
+    flex-direction: column;
+    border: #ececec 2.5px solid;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    height: 30%;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box > input{
+    width: 70%;
+    height: 30%;
+    border: #0071bd 2px solid;
+    border-bottom: #0071bd 2px solid;;
+}
+
+.box > button{
+    width: 25%;
+    border: #0071bd 2px solid;
+    background-color: #0071bd;
+    color: white;
+    height: 50%;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    border: #ececec 1.5px solid;
+    height: 50%;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 25%;
+    align-items: center;
+}
+
+.item > button{
+    border: #26354c 2px solid;
+    background-color: #26354c;
+    color: white;
+
+}
+
+.item *{
+    height: 70%;
+}
+
+.filogy2{
+    display: flex;
+    height: 20%;
+}
+
+.aviso_error {
+    color: red;
+}
+

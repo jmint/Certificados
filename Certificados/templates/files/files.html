@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block contenido %}
+    <div class="vista">
+        <div class="titulo"><h1>Bienvenido</h1></div>
+        <div class="cuerpo">
+            <div class="contenedor-datos">
+                <div class="datos">
+                    <label>Cliente:</label>
+                    <p>NOMBRE DE EMPRESA S.A.C</p>
+                    <label>R.U.C.:</label>
+                    <p>38746382912</p>
+                    <label>Dirección:</label>
+                    <p>Av. Direccion empresa 111, Lima</p>
+                    <div class="boton-salir">
+                        <button>SALIR</button>
+                    </div>
+                    <div class="filogy">
+                        <span>Powered by Filogy.pe</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-busqueda">
+                <div class="buscador">
+                    <div class="box">
+                        <input type="text" name="cadena"/><button onclick="filtrarCertificados()">BUSCAR</button>
+                    </div>
+                    <div class="grid" id="grid">
+
+
+                    </div>
+                    <div class="filogy2">
+                        <span>Powered by Filogy.pe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="{{ cod_cliente }}" name="cod_cliente">
+<script>
+    var texto = "";
+    $('input[name=cadena]').on('change keyup paste mouseup', guardaCadena);
+
+    function guardaCadena(){
+        texto = $(this).val();
+        console.log(texto, "guarda");
+    }
+
+    function filtrarCertificados() {
+        console.log(texto, "funcion filtrar");
+        $.ajax({
+            data: {'texto': texto},
+            url: '/files_ajax/',
+            dataType: 'json',
+            type: 'GET',
+            success: function(data) {
+                var html = "";
+                for (var i= 0; i < data.length; i++){
+                    html += '<div class="item"><p>' +
+                        data[i].numero + '-' + data[i].serie +
+                        '</p><button>Descargar</button></div>'
+                }
+                $('#grid').html(html);
+            },
+            error: function (err){
+                console.log(err)
+            }
+        });
+
+    }
+
+
+</script>
+{% endblock %}
+
+{#xhr.send(encodeURI('texto=' + texto + '&cod_cliente=' + cod_cliente))#}
+
+{% comment %}
+<div class="item">
+    <p>Item</p><button>Descargar</button>
+</div>{% endcomment %}
